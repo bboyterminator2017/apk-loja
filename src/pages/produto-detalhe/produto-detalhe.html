@@ -9,14 +9,13 @@
 
 <ion-content padding>
     <ion-card>
-        <img src="https://www.casasbahia-imagens.com.br/html/conteudo-produto/38/7141079/processador-4g-celular.jpg">
+      <img src="../../assets/imgs/{{produto.imagem}}">
         <ion-card-content>
           <ion-card-title>
-            Nine Inch Nails Live
+            {{produto.nome}}
             </ion-card-title>
           <p>
-            The most popular industrial group ever, and largely
-            responsible for bringing the music to a mass audience.
+            {{produto.preco | currency:'BRL':true:'1.2-2'}}
           </p>
         </ion-card-content>
       </ion-card>

@@ -18,23 +18,14 @@
   <h3>NOME CATEGORIA</h3>
 
   <ion-list>
-      <ion-item>
+      <ion-item *ngFor="let p of produtos">
         <ion-thumbnail item-start>
-          <img src="https://www.casasbahia-imagens.com.br/html/conteudo-produto/38/7141079/processador-4g-celular.jpg">
+          <img src="../../assets/imgs/{{p.imagem}}">
         </ion-thumbnail>
-        <h2>Celular Samsung</h2>
-        <p>R$ 1200,00</p>
-        <button ion-button clear item-end (click)="navProdutoDetalhe()">Visualizar</button>
+        <h2>{{p.nome}}</h2>
+        <p>{{p.preco | currency:'BRL':true:'1.2-2'}}</p>
+        <button ion-button clear item-end (click)="navProdutoDetalhe(p)">Visualizar</button>
       </ion-item>
-
-      <ion-item>
-          <ion-thumbnail item-start>
-            <img src="https://www.lojaspresidente.com.br/media/catalog/product/cache/1/small_image/455x/9df78eab33525d08d6e5fb8d27136e95/i/m/ximg33205.jpg_10.jpg.pagespeed.ic.Mr1kQZePXj.jpg">
-          </ion-thumbnail>
-          <h2>Celular Motorola</h2>
-          <p>R$ 1100,00</p>
-          <button ion-button clear item-end>Visualizar</button>
-        </ion-item>
     </ion-list>
-
 </ion-content>
+
