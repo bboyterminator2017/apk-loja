@@ -10,12 +10,22 @@ import { PRODUTOS } from '../../config/api.config';
 })
 export class ProdutosPage {
 
+  id_categoria : number;
+  produtos: Produto[] = [];
+  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
+    this.id_categoria = this.navParams.get('id');
+
+
+
+    console.log(this.id_categoria);
   }
 
-  produtos: Produto[] = PRODUTOS;
+  
 
-  navProdutoDetalhe(produto : Produto){
+  navProdutoDetalhe(produto : Produto){ 
     this.navCtrl.push("ProdutoDetalhePage",{produto : produto});
   }
 

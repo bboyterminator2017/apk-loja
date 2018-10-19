@@ -13,10 +13,10 @@
 
 <ion-content padding>
     <ion-content>
-        <ion-item-group>
+        <ion-item-group *ngFor="let c of categorias">
          
-          <ion-item (click)="navProdutos()">Eletrônicos</ion-item>
-          <ion-item (click)="navProdutos()">Móveis</ion-item>
+          <ion-item (click)="navProdutos(c.id)">{{c.nome}}</ion-item>
+          
           
         </ion-item-group>
       </ion-content>

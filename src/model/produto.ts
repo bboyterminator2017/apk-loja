@@ -3,4 +3,5 @@ export class Produto{
     nome: string;
     preco : number;
     imagem : string;
+    categoria_id : number;
 }
