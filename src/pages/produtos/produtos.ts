@@ -13,17 +13,17 @@ export class ProdutosPage {
   id_categoria : number;
   produtos: Produto[] = [];
   
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
     this.id_categoria = this.navParams.get('id');
 
+    for (var item in PRODUTOS) {
+       if(PRODUTOS[item].categoria_id==this.id_categoria){
+          this.produtos.push(PRODUTOS[item]);
+       }
+    }
 
-
-    console.log(this.id_categoria);
   }
-
-  
 
   navProdutoDetalhe(produto : Produto){ 
     this.navCtrl.push("ProdutoDetalhePage",{produto : produto});
